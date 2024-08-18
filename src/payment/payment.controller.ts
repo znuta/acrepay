@@ -32,7 +32,7 @@ export class PaymentController {
     const { total, saleid, notify_url, email } = encryptDataDto;
 
     const data = JSON.stringify({ total, saleid, notify_url, email });
-    const encryptedData = this.cryptoService.encryptData(data);
+    const encryptedData = this.paystackService.cryptoService.encryptData(data);
 
     // Return the encrypted data as a URL-encoded string
     return encodeURIComponent(encryptedData);

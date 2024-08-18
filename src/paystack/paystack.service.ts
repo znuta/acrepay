@@ -12,7 +12,7 @@ export class PaystackService {
   constructor(
     private readonly configService: ConfigService,
     private readonly httpService: HttpService,
-    private readonly cryptoService: CryptoService,
+    public readonly cryptoService: CryptoService,
   ) {
     this.secretKey = this.configService.get<string>('PAYSTACK_SECRET_KEY');
     if (!this.secretKey) {
