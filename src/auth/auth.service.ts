@@ -20,14 +20,6 @@ export class AuthService {
     const cipher = createCipheriv('aes-256-cbc', this.encryptionKey, this.iv);
     let encrypted = cipher.update(apiKey, 'utf8', 'hex');
     encrypted += cipher.final('hex');
-    console.log(
-      '___Encrypted___',
-      encrypted,
-      'KEY:',
-      this.encryptionKey.toString(),
-      'IV:',
-      this.iv.toString(),
-    );
     return encrypted;
   }
 
