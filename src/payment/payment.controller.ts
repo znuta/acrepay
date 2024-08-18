@@ -16,7 +16,7 @@ import {
   EncryptDataRequest,
   InitializePaymentRequest,
 } from './dto/payment.dto';
-import { CryptoService } from 'src/common/services/crypto.service';
+import { CryptoService } from '../common/services/crypto.service';
 
 // Uncomment the guard to use API key protection
 // @UseGuards(ApiKeyGuard)
