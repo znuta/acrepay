@@ -8,11 +8,9 @@ export class CryptoService {
   private iv: Buffer;
 
   constructor(private readonly configService: ConfigService) {
-    // const encryptionKeyHex = this.configService.get<string>('ENCRYPTION_KEY');
-    // const ivHex = this.configService.get<string>('IV');
-    const encryptionKeyHex =
-      'e4b3f9c9f8fbb2e5a634d56b39bbd6cf8a2bfb1d75ff2e7b6f4d9e594c9d02d1';
-    const ivHex = 'a3d8b9c7854fdb2a842b4577bb563e7a';
+    const encryptionKeyHex = this.configService.get<string>('ENCRYPTION_KEY');
+    const ivHex = this.configService.get<string>('IV');
+
     if (!encryptionKeyHex || !ivHex) {
       throw new Error('Missing encryption key or IV');
     }
