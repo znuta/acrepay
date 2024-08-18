@@ -12,6 +12,7 @@ export class CryptoService {
     const ivHex = this.configService.get<string>('IV');
 
     if (!encryptionKeyHex || !ivHex) {
+      console.log('___KEYS', encryptionKeyHex, ivHex);
       throw new Error('Missing encryption key or IV');
     }
 
