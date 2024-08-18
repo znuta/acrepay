@@ -14,7 +14,7 @@ export class PaystackService {
     private readonly httpService: HttpService,
     public readonly cryptoService: CryptoService,
   ) {
-    this.secretKey = this.configService.get<string>('PAYSTACK_SECRET_KEY');
+    this.secretKey = 'sk_test_b3e867bafda61dd4d43c5d625d155ed890a5d2ed';
     if (!this.secretKey) {
       throw new Error(
         'PAYSTACK_SECRET_KEY is not defined in the environment variables',
